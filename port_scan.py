@@ -4,6 +4,8 @@ host_input = input("Digite o host que deseja fazer o port scan: ")
 range_input = input("Digite um range de portas, exemplo (22-8180): ")
 print(nmScan.scan(host_input, range_input))
 
+# Found in https://www.studytonight.com/network-programming-in-python/integrating-port-scanner-with-nmap
+
 for host in nmScan.all_hosts():
     print('Host : %s (%s)' % (host, nmScan[host].hostname()))
     print('State : %s' % nmScan[host].state())
